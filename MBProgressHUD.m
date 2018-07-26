@@ -20,8 +20,8 @@
 
 CGFloat const MBProgressMaxOffset = 1000000.f;
 
-static const CGFloat MBDefaultPadding = 4.f;
-static const CGFloat MBDefaultLabelFontSize = 16.f;
+static const CGFloat MBDefaultPadding = 10.f;
+static const CGFloat MBDefaultLabelFontSize = 15.f;
 static const CGFloat MBDefaultDetailsLabelFontSize = 12.f;
 
 
@@ -544,7 +544,7 @@ static const CGFloat MBDefaultDetailsLabelFontSize = 12.f;
 
     // Ensure minimum side margin is kept
     NSMutableArray *sideConstraints = [NSMutableArray array];
-    [sideConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"|-(>=margin)-[bezel]-(>=margin)-|" options:0 metrics:metrics views:NSDictionaryOfVariableBindings(bezel)]];
+    [sideConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"|-(>=40)-[bezel]-(>=40)-|" options:0 metrics:metrics views:NSDictionaryOfVariableBindings(bezel)]];
     [sideConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(>=margin)-[bezel]-(>=margin)-|" options:0 metrics:metrics views:NSDictionaryOfVariableBindings(bezel)]];
     [self applyPriority:999.f toConstraints:sideConstraints];
     [self addConstraints:sideConstraints];
